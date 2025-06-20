@@ -20,6 +20,8 @@ def split_text(text, max_words=225):
 
 
 def get_qa_pipeline():
+    # i used this ai module deepset/roberta-base-squad because it's light i know it's bad and it's answers makes no sense
+    # change the module if you want to ,but remeber that i used this cause it's light and small (only 500mb)
     tokenizer = AutoTokenizer.from_pretrained("deepset/roberta-base-squad2")
     model = AutoModelForQuestionAnswering.from_pretrained(
         "deepset/roberta-base-squad2")
