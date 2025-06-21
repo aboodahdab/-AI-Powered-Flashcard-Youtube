@@ -69,7 +69,7 @@ def main():
     transcript = YouTubeTranscriptApi.get_transcript(video_id)
     full_text = " ".join([entry['text'] for entry in transcript])
 
-    save_to_csv(generate_flashcards(split_text(full_text)), get_qa_pipeline())
+    save_to_csv(generate_flashcards(split_text(full_text), get_qa_pipeline()))
 
 
 if __name__ == "__main__":
